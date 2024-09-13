@@ -1,11 +1,29 @@
 @import url('https://fonts.cdnfonts.com/css/treasure-map-deadland');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'TreasureMap';
+    src: url('/Assets/treasure-map-font/Treasuremap-Ea1vj.ttf') format('truetype'); /* Modern browsers */
+    font-weight: normal; 
+    font-style: normal;
+}
 
-*{
+*, ::after, ::before{
     margin : 0;
     padding : 0;
-    font-stretch: semi-expanded;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat";
+    box-sizing: border-box;
 }
+body{
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    letter-spacing: 0.041em;
+    box-sizing: border-box;
+}
+html {
+    -webkit-text-size-adjust : 100%;
+}
+
 .container {
     background : url(./Assets/bg.jpg) no-repeat center center/cover;
     height: 100vh;
@@ -15,9 +33,11 @@
 }
 .login-container {
     background-color: rgba(17,52,70,.95);
-    padding: 20px;
+    font-size: 16px;
+    font-weight: 500;
     border-radius: 10px;
     width : 790px;
+    height: 350px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
@@ -28,67 +48,90 @@
     flex-direction: column;
     align-items: center;
 }
-h1{ 
-    font-size: 2.5em;
+.login_title{ 
+    font-size: 3em;
     font-weight: 500;
-    margin: 10px 0;
+    margin: 30px 0 0 0 ;
     text-transform: uppercase;
+    text-align: center;
+    letter-spacing: normal;
 
 }
-h2{
+.tag_line{
+    width: 100%;
     font-size: 1.5em;
-    font-weight: 200;
-    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 0.041em ;
+    /* margin-bottom: 20px; */
 }
 
 form{
     width : 60%; 
 }
 .input-container{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-top: 10px;
     position: relative;
 }
 input{
     width : 100%;
-    border: 2px solid #b1b1b1;
-    outline: none;
+    border-color: #fff;
     border-radius:  29px ;
     min-height: 50px;
-    font-size: 1.2em;
-    padding: 0 10px;
-    background-color: #2c5167;
+    font-size: 1em;
+    padding: 1px 2px 1px 20px;
+    background-color: #3a4e5a;
+    color : #b1b1b1;
+    margin-top: 10px;
 }
 input::placeholder{
-    color : #b1b1b1
+    color : #fff;
 }
-.input-container img{
+input:focus{
+    outline: none;
+    border-color: #bfdeff;
+    box-shadow: 0 0 8px rgba(216, 235, 255, 0.5);
+}
+
+.image_container{
+    width : 100%;
+    position: relative;
+}
+
+.image_container img{
     position: absolute;
-    right: 10px;
+    right : 15px;
+    top : 20px;
+    
 }
 .btn-container{
     width : 100%;
     display : flex; 
-    gap : 5px  ; 
-    margin-bottom: 20px;
+    justify-content: space-between; 
+    /* margin-bottom: 20px; */
 }
 .login-btn {
-    flex : 1;
-    width : 100%; 
+    width : 49%; 
     border-radius: 29px;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 50px ;
+    height: 58px ;
+    margin-top: 16px;
+    padding: 1px 6px;
     background-image: linear-gradient(#2c5167, #2c5167);
-    color : #fff;
-    border: 1px solid #2c5167;
+    color : #788b96;
+    border: none;
+    font-size: 1em;
+    font-weight: 500;
 }
 .gray {
     background-image: linear-gradient(#75838b, #3b4246);
-    border: 1px solid #75838b;
+    color : white
+    /* border: 1px solid #75838b; */
 }
 
 .login-btn span {
@@ -104,12 +147,13 @@ input::placeholder{
 }
 
 .map-font{
-    font-family: 'Treasure Map Deadhand', sans-serif;
-    font-size: 4rem;
-    margin: 10px 0;
+    font-family: 'TreasureMap', sans-serif;
+    font-size: 80px;
+    /* margin: 10px 0; */
 }
 .headings{
-    margin: 7% 0;
+    margin-top : 190px;
+    margin-bottom: 90px;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -118,57 +162,68 @@ input::placeholder{
     text-align: center;
 }
 
+.headings p {
+    font-size: 30px;
+    letter-spacing: normal;
+}
 
 nav{
     width : 100%;
     min-height : 50px; 
     display: flex ;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     flex-wrap: wrap;
     box-sizing: border-box;
     /* padding: 0 20px; */
 }
 .img_container {
-    padding: 0 20px;
+    /* padding: 0 20px; */
     flex : 1;
+    width: 100%;
+    margin-left : 50px;
+    margin-top: 25px;
 }
 .nav-btn-grp {
-    flex : 1;
+    width: 700px;
+    margin-top: 40px;
     display: flex;
-    gap : 5px;
-    padding: 0 20px;
-
+    justify-content: start;
+    gap : 15px;
 }
 .nav-btn {
     display: flex;
     align-items: center;
     width : fit-content;
-    height : 30px;
-    padding: 0 20px;
+    height : 37px;
+    padding: 0 25px;
     background: #113446;
-    border: 1px solid rgb(159, 159, 159);
-    border-radius: 15px ;
-    color : rgb(159, 159, 159);
-    font-weight: 100;
+    border: 1px solid #35515D;
+    border-radius: 25px ;
+    color : #fff;
+    font-weight: 400;
     text-transform: uppercase;
+    font-size: 16px;
+}
+.nav-btn img {
+    margin-right: 10px;
 }
 .nav-btn a{ 
     display: flex;
     justify-content: center;
-    color: #b1b1b1;
+    color: #fff;
     text-decoration: none;
 
 }
 .menu-item {
-    width : 282px ;
+    width : 281.44px ;
     height : 350px;
     position: relative;
     border-radius: 25
 }
 .menu-wrapper {
-    width : 282px ;
-    height : 355px;
+    width : 281.44px ;
+    height : 350px;
     background: url(./Assets/mask.svg);
     position: absolute;
     top : 0;
@@ -176,7 +231,7 @@ nav{
 }
 
 .internal-menu-continer{
-    width : 282px ;
+    width : 281.44px ;
     height : 350px;
     border-radius: 28px;
     background: linear-gradient(#3B5667, #2C3D48);
@@ -187,9 +242,9 @@ nav{
 .menu-container {
     display: flex;
     justify-content: center;
-    gap: 10px ;
+    gap: 15px ;
     flex-wrap: wrap;
-    margin: 20px 0;
+    /* margin: 130px 0; */
 }
 .red-menu{
     background: linear-gradient(#D81B24, #1A3751);
@@ -203,13 +258,25 @@ nav{
     align-items:center;
 }
 .icon-div{
-    padding: 40px;
-    margin: 20% 0;
+    width: 137px;
+    height: 137px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 62px;
+    margin-bottom: 80px;
     border-radius: 100%;
-    border: 2px solid #b1b1b1;
+    opacity: 0.5;
+    border: 4px solid #fff;
+}
+.white_border{
+    opacity: 1 ;
 }
 .action-text{
-    padding: 10% 0;
+    font-size: 32px;
+    margin-bottom: 30px ;
+    /* letter-spacing: 1.15; */
+    /* padding: 10% 0; */
     color : #b1b1b1;
 }
 .login-btn a {
@@ -217,39 +284,110 @@ nav{
     text-decoration: none;
 }
 
+@media (max-width : 920px){
+    .nav-btn-grp{
+        flex : 1;
+        gap: 5px;
+        row-gap: 5px;
+        justify-content: center;
+        
+    }
+
+}
+
 @media (max-width : 800px) {
     .login-container {
+        height: 320px;
         width : 98%;
     }
     form {
-        width : 80%;
+        width : 60%;
     }
     .map-font{
         font-size: 2rem;
     }
+    .login_title{
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+    .tag_line{
+        font-size: 1.2em;
+        letter-spacing: .041em;
+    }
+    .image_container {
+        width: 460px;
+    }
 }
-@media (max-width : 480px) {
-    h1 {
+@media (max-width : 500px) {
+    .login_title {
         font-size: 2em;
     }
-    h2{
-        font-size: 1em;
+    .tag_line{
+        font-size: .8em;
     }
+    .login-container{
+        height: 300px;
+    }
+    .login-btn{
+        width: 280px !important;
+        height: 55px !important;
+        font-size: .7em !important;
+    }
+    form{
+        width: 90%;
+    }
+    .nav-btn-grp{
+        gap : 0px;
+        font-size: 12px ;
+        justify-content: center;
+    }
+    .img_container{
+        display: flex;
+        margin : 40px 0 ;
+        justify-content: center;
+    }
+    
+    .nav-btn{
+        flex : 1
+    }
+    .headings p {
+        font-size: 18px;
+    }
+
+}
+
+
+@media (max-width : 480px) {
+    .login_title {
+        font-size: 1.6em;
+    }
+    
     form {
         width : 95%;
     }
     .login-btn {
         font-size: 0.7em;
     }
-    .img_container{
-        display: flex;
-        margin : 20px 0;
-        justify-content: center;
-    }
-    .nav-btn-grp{
-        justify-content: center;
-    }
     .map-font{
         font-size: 1.5rem;
     }
+}
+
+@media (max-width : 300px) {
+    .nav-btn-grp{
+        flex-wrap: wrap;
+    }
+    .nav-btn{
+        margin: 5px;
+    }
+    .menu-item, .internal-menu-continer{
+        width : 95%; 
+    }
+    .menu-wrapper{
+        right: 9px;
+    }
+    .action-text{
+        font-size: 18px;
+    }
+   
 }
