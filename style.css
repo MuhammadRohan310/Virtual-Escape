@@ -204,6 +204,7 @@ nav{
     font-weight: 400;
     text-transform: uppercase;
     font-size: 16px;
+    opacity: 0.7;
 }
 .nav-btn img {
     margin-right: 10px;
@@ -284,6 +285,93 @@ nav{
     text-decoration: none;
 }
 
+.leaderboard_bg{
+    background: url("./Assets/leadboard-bg.png") no-repeat center center/cover ;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.table_container{
+    color: #fff;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: #091B25;
+    border-radius: 10px;
+    border: 1px solid #35515D;
+    margin-top: 45px ;
+    margin-bottom: 90px ;
+    justify-content: flex-start;
+    align-items: center;
+}
+.table_container span {
+    margin: 45px 0;
+    width: 80%;
+    font-size: 34px;
+}
+.leaderboard_btn{
+    width : 401px;
+    height : 41px;
+    background: linear-gradient(#F80705, #7B1E1D);
+    margin-bottom: 45px ;
+    border-radius: 25px ;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+
+.row_odd{
+    background-color: #0E2634;
+}
+.row_even{
+    background-color: #2D4955;
+}
+
+
+thead tr {
+    background: #0A1821;
+    padding: 15px 0;
+    border: 1px solid white;
+
+}
+
+thead td {
+    padding: 15px;
+}
+
+thead td:nth-child(2){
+    padding: 15px 0;
+}
+
+/* Wrapper to make table scrollable 
+when the screen is small */
+.table_wrapper{
+    width: 80%;
+    overflow-x: auto;
+    margin-bottom: 45px ;
+}
+.table_wrapper table {
+    border: 1px solid white;
+    font-size: 20px;
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+}
+
+.table_container th,
+.table_container td {
+    text-align: center;
+}
+
+.table_container th:nth-child(2),
+.table_container td:nth-child(2) {
+    text-align: left;
+}
+
 @media (max-width : 920px){
     .nav-btn-grp{
         flex : 1;
@@ -317,7 +405,14 @@ nav{
     .image_container {
         width: 460px;
     }
+    .table_container{
+        width: 85%;
+    }
+    .table_container span {
+        font-size: 24px ;
+    }
 }
+
 @media (max-width : 500px) {
     .login_title {
         font-size: 2em;
@@ -352,6 +447,13 @@ nav{
     }
     .headings p {
         font-size: 18px;
+    }
+    .table_container{
+        width: 95%;
+    }
+    .leaderboard_btn{
+        width: 80%;
+        font-size: 12px;
     }
 
 }
@@ -388,6 +490,10 @@ nav{
     }
     .action-text{
         font-size: 18px;
+    }
+    .leaderboard_btn{
+        
+        font-size: 10px;
     }
    
 }
